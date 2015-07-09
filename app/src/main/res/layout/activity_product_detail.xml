@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/ScrollView01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+
+            <Gallery
+                android:id="@+id/gallery1"
+                android:layout_width="fill_parent"
+                android:background="#ddd"
+                android:padding="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="0dp"
+                android:layout_marginBottom="0dp"
+
+                android:scaleType="centerCrop"
+                android:adjustViewBounds="true"
+                />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Phnom Penh Tower "
+                android:id="@+id/txtCompanyName"
+                android:layout_below="@+id/gallery1"
+                android:layout_alignParentLeft="true"
+                android:textColor="#f81eaed9"
+                android:layout_alignParentStart="true"
+                android:paddingLeft="10dp"
+                android:maxLines = "200"
+                android:scrollbars = "vertical"/>
+
+
+            <LinearLayout
+                android:id="@+id/LLRange"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@+id/txtCompanyName"
+                android:layout_marginTop="20dp"
+                >
+
+                <TextView
+                    android:id="@+id/labelPriceRang"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingLeft="10dp"
+                    android:text="- Price Rang : "
+                    android:layout_gravity="left"/>
+
+                <TextView
+                    android:id="@+id/txtPriceRang"
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_height="wrap_content"
+                    android:text="10 - 60$"
+                    android:layout_gravity="right"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/LLVisited"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@+id/LLRange"
+                android:layout_marginTop="10dp"
+                >
+
+                <TextView
+                    android:id="@+id/labelVisited"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingLeft="10dp"
+                    android:text="- Visited :"
+                    android:layout_gravity="left"/>
+
+                <TextView
+                    android:id="@+id/txtVisited"
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_height="wrap_content"
+                    android:text="100"
+                    android:layout_gravity="right"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/LLWorkingHourse"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@+id/LLVisited"
+                android:layout_marginTop="10dp"
+                >
+
+                <TextView
+                    android:id="@+id/labelWorkingHours"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingLeft="10dp"
+                    android:text="- Working Hourse : "
+                    android:layout_gravity="left"/>
+
+                <TextView
+                    android:id="@+id/txtWorkingHoure"
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_height="wrap_content"
+                    android:text="7:00 - 5:00"
+                    android:layout_gravity="right"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/LLTell"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@+id/LLWorkingHourse"
+                android:layout_marginTop="10dp"
+                >
+
+                <TextView
+                    android:id="@+id/labelTell"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingLeft="10dp"
+                    android:text="- Tel : "
+                    android:layout_gravity="left"/>
+
+                <TextView
+                    android:id="@+id/txtTel"
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_height="wrap_content"
+                    android:text="098 60 19 19"
+                    android:layout_gravity="right"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/LLAddress"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@+id/LLTell"
+                android:layout_marginTop="10dp"
+                >
+
+                <TextView
+                    android:id="@+id/labelAddress"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingLeft="10dp"
+                    android:text="- Address : "
+                    android:layout_gravity="left"/>
+
+                <TextView
+                    android:id="@+id/txtAddress"
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_height="wrap_content"
+                    android:text="#271, Phnom penh tower "
+                    android:layout_gravity="right"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/LLWebsite"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@+id/LLAddress"
+                android:layout_marginTop="10dp"
+                >
+
+                <TextView
+                    android:id="@+id/labelWebsite"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingLeft="10dp"
+                    android:text="- Website :"
+                    android:layout_gravity="left"/>
+
+                <TextView
+                    android:id="@+id/txtWebsite"
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_height="wrap_content"
+                    android:text=" google.com"
+                    android:layout_gravity="right"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/LLReasonLike"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@+id/LLWebsite"
+                android:layout_marginTop="10dp"
+                >
+
+                <TextView
+                    android:id="@+id/labelReasonLike"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingLeft="10dp"
+                    android:text="- Reason liked :"
+                    android:layout_gravity="left"/>
+
+                <TextView
+                    android:id="@+id/txtReasonLike"
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_height="wrap_content"
+                    android:text=" Because of I like that placem"
+                    android:layout_gravity="right"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/LLDescription"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@+id/LLReasonLike"
+                android:layout_marginTop="10dp"
+                >
+
+                <TextView
+                    android:id="@+id/labelDescription"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingLeft="10dp"
+                    android:text="- Description : "
+                    android:layout_gravity="left"/>
+
+                <TextView
+                    android:id="@+id/txtDescription"
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_height="wrap_content"
+                    android:text="this is my description justing... "
+                    android:layout_gravity="right"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/LLBestPlace"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@+id/LLDescription"
+                android:layout_marginTop="10dp"
+                >
+
+                <TextView
+                    android:id="@+id/labelBestPlace"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingLeft="10dp"
+                    android:text="- Best Place : "
+                    android:layout_gravity="left"/>
+
+                <TextView
+                    android:id="@+id/txtBestPlace"
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_height="wrap_content"
+                    android:text="Family , couple sweet  "
+                    android:layout_gravity="right"
+                    />
+            </LinearLayout>
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="See more photo"
+                android:id="@+id/btnMorePhoto"
+                android:layout_below="@+id/LLBestPlace"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="10dp"
+                android:textColor="#f81eaed9"/>
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+    <!-- Footer aligned to bottom -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="4"
+        android:layout_alignParentBottom="true"
+        android:background="#8a000000"
+        android:gravity="center"
+        android:id="@+id/linearLayout">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Map"
+            android:id="@+id/map"
+            android:drawableLeft="@android:drawable/ic_menu_mapmode"
+            />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:drawableLeft="@android:drawable/ic_menu_call"
+            android:text="Call"
+            android:id="@+id/call" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Share"
+            android:drawableLeft="@android:drawable/ic_menu_share"
+            android:id="@+id/share" />
+
+    </LinearLayout>
+</RelativeLayout>

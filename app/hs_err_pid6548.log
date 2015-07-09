@@ -1,0 +1,154 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  Internal Error (c1_Compiler.cpp:87), pid=6548, tid=3432
+#  guarantee(blob != NULL) failed: must create initial code buffer
+#
+# JRE version: 7.0_25-b17
+# Java VM: Java HotSpot(TM) Client VM (23.25-b01 mixed mode windows-x86 )
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.sun.com/bugreport/crash.jsp
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x49a9e400):  JavaThread "C1 CompilerThread0" daemon [_thread_in_native, id=3432, stack(0x49d90000,0x49de0000)]
+
+Stack: [0x49d90000,0x49de0000],  sp=0x49ddf9f4,  free space=318k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x167e31]
+V  [jvm.dll+0x1620b5]
+V  [jvm.dll+0x23950f]
+V  [jvm.dll+0x44afb]
+V  [jvm.dll+0x45036]
+V  [jvm.dll+0x144447]
+V  [jvm.dll+0x1445b0]
+V  [jvm.dll+0x177bb9]
+C  [msvcr100.dll+0x5c6de]
+C  [msvcr100.dll+0x5c788]
+C  [kernel32.dll+0x53c45]
+C  [ntdll.dll+0x637f5]
+C  [ntdll.dll+0x637c8]
+
+
+Current CompileTask:
+C1:    117    1             java.lang.String::hashCode (55 bytes)
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x49aa2000 JavaThread "Service Thread" daemon [_thread_new, id=4080, stack(0x00000000,0x00000000)]
+=>0x49a9e400 JavaThread "C1 CompilerThread0" daemon [_thread_in_native, id=3432, stack(0x49d90000,0x49de0000)]
+  0x49a9d400 JavaThread "Attach Listener" daemon [_thread_blocked, id=6832, stack(0x49e90000,0x49ee0000)]
+  0x49a9a000 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=3680, stack(0x00650000,0x006a0000)]
+  0x49a41c00 JavaThread "Finalizer" daemon [_thread_blocked, id=6788, stack(0x49c30000,0x49c80000)]
+  0x49a3c400 JavaThread "Reference Handler" daemon [_thread_blocked, id=5980, stack(0x49d30000,0x49d80000)]
+  0x00b4b000 JavaThread "main" [_thread_in_Java, id=496, stack(0x005e0000,0x00630000)]
+
+Other Threads:
+  0x49a36c00 VMThread [stack: 0x00580000,0x005d0000] [id=6988]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap
+ def new generation   total 4928K, used 377K [0x03a00000, 0x03f50000, 0x18f50000)
+  eden space 4416K,   8% used [0x03a00000, 0x03a5e6c0, 0x03e50000)
+  from space 512K,   0% used [0x03e50000, 0x03e50000, 0x03ed0000)
+  to   space 512K,   0% used [0x03ed0000, 0x03ed0000, 0x03f50000)
+ tenured generation   total 10944K, used 0K [0x18f50000, 0x19a00000, 0x43a00000)
+   the space 10944K,   0% used [0x18f50000, 0x18f50000, 0x18f50200, 0x19a00000)
+ compacting perm gen  total 12288K, used 1470K [0x43a00000, 0x44600000, 0x47a00000)
+   the space 12288K,  11% used [0x43a00000, 0x43b6f950, 0x43b6fa00, 0x44600000)
+No shared spaces configured.
+
+Card table byte_map: [0x49800000,0x49a30000] byte_map_base: 0x497e3000
+
+Polling page: 0x00260000
+
+Code Cache  [0x01a00000, 0x01a50000, 0x03a00000)
+ total_blobs=96 nmethods=0 adapters=64 free_code_cache=32484Kb largest_free_block=33263680
+
+Compilation events (1 events):
+Event: 0.109 Thread 0x49a9e400    1             java.lang.String::hashCode (55 bytes)
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Internal exceptions (1 events):
+Event: 0.060 Thread 0x00b4b000 Threw 0x03a06060 at C:\jdk7u2_32P\jdk7u25\hotspot\src\share\vm\prims\jni.cpp:3994
+
+Events (10 events):
+Event: 0.093 loading class 0x49a84ca0
+Event: 0.093 loading class 0x49a84ca0 done
+Event: 0.093 loading class 0x49a98c40
+Event: 0.093 loading class 0x49a98c40 done
+Event: 0.108 loading class 0x00acacc8
+Event: 0.108 loading class 0x00acacc8 done
+Event: 0.109 Thread 0x49a9a000 Thread added: 0x49a9a000
+Event: 0.109 Thread 0x49a9d400 Thread added: 0x49a9d400
+Event: 0.109 Thread 0x49a9e400 Thread added: 0x49a9e400
+Event: 0.109 Thread 0x49aa2000 Thread added: 0x49aa2000
+
+
+Dynamic libraries:
+0x00bd0000 - 0x00bff000 	C:\Program Files\Java\jdk1.7.0_25\bin\java.exe
+0x76f10000 - 0x7704c000 	C:\Windows\SYSTEM32\ntdll.dll
+0x769a0000 - 0x76a74000 	C:\Windows\system32\kernel32.dll
+0x75110000 - 0x7515a000 	C:\Windows\system32\KERNELBASE.dll
+0x76d20000 - 0x76dc0000 	C:\Windows\system32\ADVAPI32.dll
+0x75360000 - 0x7540c000 	C:\Windows\system32\msvcrt.dll
+0x76c30000 - 0x76c49000 	C:\Windows\SYSTEM32\sechost.dll
+0x755f0000 - 0x75691000 	C:\Windows\system32\RPCRT4.dll
+0x766b0000 - 0x76779000 	C:\Windows\system32\USER32.dll
+0x76ec0000 - 0x76f0e000 	C:\Windows\system32\GDI32.dll
+0x758d0000 - 0x758da000 	C:\Windows\system32\LPK.dll
+0x76e20000 - 0x76ebd000 	C:\Windows\system32\USP10.dll
+0x73f20000 - 0x740be000 	C:\Windows\WinSxS\x86_microsoft.windows.common-controls_6595b64144ccf1df_6.0.7601.17514_none_41e6975e2bd6f2b2\COMCTL32.dll
+0x76dc0000 - 0x76e17000 	C:\Windows\system32\SHLWAPI.dll
+0x76980000 - 0x7699f000 	C:\Windows\system32\IMM32.DLL
+0x76c50000 - 0x76d1c000 	C:\Windows\system32\MSCTF.dll
+0x58fd0000 - 0x5908e000 	C:\Program Files\Java\jdk1.7.0_25\jre\bin\msvcr100.dll
+0x58c80000 - 0x58fc2000 	C:\Program Files\Java\jdk1.7.0_25\jre\bin\client\jvm.dll
+0x72de0000 - 0x72de7000 	C:\Windows\system32\WSOCK32.dll
+0x758f0000 - 0x75925000 	C:\Windows\system32\WS2_32.dll
+0x76c20000 - 0x76c26000 	C:\Windows\system32\NSI.dll
+0x728b0000 - 0x728e2000 	C:\Windows\system32\WINMM.dll
+0x77050000 - 0x77055000 	C:\Windows\system32\PSAPI.DLL
+0x5d010000 - 0x5d01c000 	C:\Program Files\Java\jdk1.7.0_25\jre\bin\verify.dll
+0x5cf50000 - 0x5cf70000 	C:\Program Files\Java\jdk1.7.0_25\jre\bin\java.dll
+0x5cf30000 - 0x5cf43000 	C:\Program Files\Java\jdk1.7.0_25\jre\bin\zip.dll
+
+VM Arguments:
+jvm_args: -Xmx1024M -Dfile.encoding=windows-1252 -Duser.country=US -Duser.language=en -Duser.variant 
+java_command: com.android.dx.command.Main --dex --num-threads=4 --output C:\Android\Caminfo\app\build\intermediates\pre-dexed\debug\classes-84b16aeb287aac1128670581c9a78b10311d9094.jar C:\Android\Caminfo\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-cast\7.5.0\jars\classes.jar
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+PATH=C:\ProgramData\Oracle\Java\javapath;C:\Program Files\NVIDIA Corporation\PhysX\Common;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\nodejs\;C:\Program Files\GtkSharp\2.12\bin;C:\Program Files\Skype\Phone\;C:\Users\Vantha\AppData\Local\Android\android-sdk\tools;C:\Users\Vantha\AppData\Local\Android\android-sdk\platform-tools;C:\Users\Vantha\Desktop\software\IDE\AndroidCampany\apache-ant-1.9.4-bin\apache-ant-1.9.4\bin;C:\Users\Vantha\AppData\Roaming\npm;C:\Program Files\Java\jre7\bin
+USERNAME=Vantha
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=x86 Family 6 Model 60 Stepping 3, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 7 Build 7601 Service Pack 1
+
+CPU:total 4 (2 cores per cpu, 2 threads per core) family 6 model 60 stepping 3, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, ht, tsc, tscinvbit
+
+Memory: 4k page, physical 3640912k(257348k free), swap 4079768k(34528k free)
+
+vm_info: Java HotSpot(TM) Client VM (23.25-b01) for windows-x86 JRE (1.7.0_25-b17), built on Jun 21 2013 13:06:48 by "java_re" with unknown MS VC++:1600
+
+time: Wed Jul 08 15:47:31 2015
+elapsed time: 0 seconds
+
